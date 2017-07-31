@@ -1,10 +1,22 @@
 // Define variables for your color scheme
 
 // For example:
+$white: white;
 $red: #EE5F5B;
 $blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
 $green: #32B796;
 $gray: #000000;
-$light-gray: #F4F4F4;
+$light-gray: #2A363B;
+$medium-gray: #E6E6E6;
+$dark-gray: #2A363B;
+$pink: #EB4A5F;
+$light-pink: #FF847C;
+$skin: #FECEAB;
+$font-gray: #999;
+
+// Overide Bootstrap:
+$btn-primary-bg: $light-pink;
+
+
