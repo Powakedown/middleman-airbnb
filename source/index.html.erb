@@ -1,15 +1,25 @@
 ---
-title: Le Wagon - Middleman
+title: Air Bnb
 ---
+<%= partial "layouts/banner" %>
 
 <div id="home">
-  <div class="home-content">
-    <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
-    <p class="about">
-      <%= link_to "More about this template", "about.html" %>
-    </p>
+  <div class="container">
+    <div class="row">
+      <h1>Recent flats</h1>
+      <% data.users.each do |user| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'https://kitt.lewagon.com/placeholder/cities/random' %><%= user.city %>)";>
+            <div class="card-category"><%= user.city %> <%= user.country  %></div>
+            <div class="card-description">
+              <h2><%= user.name %></h2>
+              <p><%= user.description %></p>
+            </div>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.name}", class: "card-user" %>
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

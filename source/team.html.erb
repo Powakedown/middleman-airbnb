@@ -1,0 +1,15 @@
+<div id="team" class="text-center">
+  <div>
+    <h1>Buddy of the day <i class="fa fa-heart" style="display: inline; color: red;"></i></h1>
+    <ul class="list-inline">
+      <% data.team.each do |team_mate| %>
+      <li>
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{team_mate.username}", class: "img-circle img-avatar-medium" %>
+      <h2><%= team_mate.name.capitalize %></h2>
+      <a href="https://www.github.com/#{team_mate.username}"><i class="fa fa-github" style="display: inline;"></i>
+      <%= team_mate.username %></a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
